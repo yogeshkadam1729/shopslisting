@@ -4,13 +4,14 @@ eureka:
     hostname: eureka-0
   client:
     service-url:
-      defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+     defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+      #defaultZone : http://localhost:8761/eureka/
 
 spring:
   datasource:
-    url:
-    password:
-    username:
+    url: jdbc:mysql://database-1.cwb4apwm5lun.ap-south-1.rds.amazonaws.com/roboelectric
+    password: admin123
+    username: root
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
